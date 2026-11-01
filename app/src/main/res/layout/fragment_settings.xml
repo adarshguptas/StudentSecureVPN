@@ -1,0 +1,74 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_horizontal_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DNS provider"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <RadioGroup
+            android:id="@+id/dnsRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/cloudflareRadio" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cloudflare (1.1.1.1, 1.0.0.1)" />
+            <RadioButton android:id="@+id/googleRadio" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Google (8.8.8.8, 8.8.4.4)" />
+            <RadioButton android:id="@+id/quad9Radio" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Quad9 (9.9.9.9, 149.112.112.112)" />
+        </RadioGroup>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/killSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Kill Switch preference" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For full Android lockdown, enable Always-on VPN and Block connections without VPN in system VPN settings. Apps cannot silently toggle that setting."
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/autoConnectWifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Auto connect on Wi‑Fi" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Theme"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/themeToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true">
+            <com.google.android.material.button.MaterialButton android:id="@+id/systemThemeButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="System" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/lightThemeButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Light" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/darkThemeButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Dark" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/aboutButton"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="About" />
+    </LinearLayout>
+</ScrollView>

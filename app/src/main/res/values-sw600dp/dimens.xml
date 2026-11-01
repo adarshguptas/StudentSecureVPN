@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="screen_horizontal_padding">72dp</dimen>
+    <dimen name="card_margin">20dp</dimen>
+</resources>
